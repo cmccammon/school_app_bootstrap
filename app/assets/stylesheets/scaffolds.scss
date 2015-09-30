@@ -1,13 +1,13 @@
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: #2F394D;
+  color: #EEE1B3;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: gaudy, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -35,6 +35,10 @@ div {
   &.field, &.actions {
     margin-bottom: 10px;
   }
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #56666B;
 }
 
 #notice {

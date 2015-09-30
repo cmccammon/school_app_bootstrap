@@ -9,14 +9,25 @@
 School.create(name: 'Franklen J. Whitaker')
 
 10.times do
-  Teacher.create(name: Faker::Name.name )
+  Teacher.create({
+    name: Faker::Name.name,
+    school_id: 1
+    })
 end
 
 10.times do
-  Course.create(name: Faker::Hacker.adjective)
+  Course.create({
+    name: Faker::Hacker.adjective,
+    teacher_id: Faker::Number.between(1, 10)
+  })
 end
 
 20.times do
-  Student.create(name: Faker::Name.name)
+  Student.create({
+    name: Faker::Name.name,
+    teacher_id: Faker::Number.between(1, 10)
+    })
+
+
 end
 
