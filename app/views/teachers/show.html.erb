@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Teacher:</strong>
+<h2>
+  Teacher:
   <%= @teacher.name %>
-</p>
+</h2>
 
   <table class="table table-striped">
     <thead>
@@ -12,14 +12,18 @@
         <th colspan="3"></th>
       </tr>
     </thead>
-  <tbody>
-    <% @teacher.students.each do |student| %>
-      <tr>
-        <td><%= student.name %></td>
-      </tr>
-    <% end %>
-  </tbody>
+    <tbody>
+      <% @teacher.students.each do |student| %>
+        <tr>
+          <td><%= student.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
   </table>
+<h3>
+Course:
+<%= @teacher.course.name %>
+</h3>
 
 
 <%= link_to 'Edit', edit_teacher_path(@teacher) %> |
